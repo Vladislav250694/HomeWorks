@@ -9,18 +9,18 @@
 
 
 
-Console.Write("Введите пятизначное число: ");
-string Number = (Console.ReadLine());
-Console.WriteLine (Palindrom(Number));
+// Console.Write("Введите пятизначное число: ");
+// string Number = (Console.ReadLine());
+// Console.WriteLine (Palindrom(Number));
 
-string Palindrom (string Number)
-{
-    if (Number[0]==Number[4] && Number [1]==Number [3])
-        return "Ввведенное число является палиндромом";
-    else
-        return "Введенное число не является палиндромом";
-   return "не то что нужно";
-}
+// string Palindrom (string Number)
+// {
+//     if (Number[0]==Number[4] && Number [1]==Number [3])
+//         return "Ввведенное число является палиндромом";
+//     else
+//         return "Введенное число не является палиндромом";
+//    return "не то что нужно";
+// }
 
 
 // Задача 21
@@ -31,9 +31,12 @@ string Palindrom (string Number)
 
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// int A=Convert.ToInt32(Console.ReadLine());
-// int B=Convert.ToInt32(Console.ReadLine());
-
+// int x1 = Coordinate ("x","A");
+// int y1 = Coordinate ("y","A");
+// int z1 = Coordinate ("z","A");
+// int x2 = Coordinate ("x","B");
+// int y2 = Coordinate ("y","B");
+// int z2 = Coordinate ("z","B");
 
 
 
@@ -46,9 +49,15 @@ string Palindrom (string Number)
 
 Console.Write("Введите число: ");
 int N=Convert.ToInt32(Console.ReadLine());
+Qube1(N);
+
+void Qube1(int N)
+{
 double Qube1=0;
 for (int i=1; i<N+1; i++)
 { 
     Qube1=Math.Pow(i,3);
     Console.WriteLine ("Число возведено в куб: " + Qube1);
 }
+}
+
