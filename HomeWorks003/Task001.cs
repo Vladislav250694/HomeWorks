@@ -9,18 +9,18 @@
 
 
 
-// Console.Write("Введите пятизначное число: ");
-// string Number = (Console.ReadLine());
-// Console.WriteLine (Palindrom(Number));
+Console.Write("Введите пятизначное число: ");
+string Number = (Console.ReadLine());
+Console.WriteLine (Palindrom(Number));
 
-// string Palindrom (string Number)
-// {
-//     if (Number[0]==Number[4] && Number [1]==Number [3])
-//         return "Ввведенное число является палиндромом";
-//     else
-//         return "Введенное число не является палиндромом";
-//    return "не то что нужно";
-// }
+string Palindrom (string Number)
+{
+    if (Number[0]==Number[4] && Number [1]==Number [3])
+        return "Ввведенное число является палиндромом";
+    else
+        return "Введенное число не является палиндромом";
+   return "не то что нужно";
+}
 
 
 // Задача 21
@@ -31,13 +31,29 @@
 
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
-// int x1 = Coordinate ("x","A");
-// int y1 = Coordinate ("y","A");
-// int z1 = Coordinate ("z","A");
-// int x2 = Coordinate ("x","B");
-// int y2 = Coordinate ("y","B");
-// int z2 = Coordinate ("z","B");
+int x1 = Coordinate ("x","A");
+int y1 = Coordinate ("y","A");
+int z1 = Coordinate ("z","A");
+int x2 = Coordinate ("x","B");
+int y2 = Coordinate ("y","B");
+int z2 = Coordinate ("z","B");
 
+double rast = Math.Round((Rasstoyanie(x1,y1,z1,x2,y2,z2)),2);
+Console.WriteLine($"Длина отрезка {rast}");
+
+int Coordinate(string coor, string tochka)
+{
+    Console.Write($"Введите координату {coor} точки {tochka}: ");
+    int vvod = Convert.ToInt32(Console.ReadLine());
+    return vvod;
+}
+
+
+double Rasstoyanie (double arg1, double arg2, double arg3, double arg4, double arg5, double arg6)
+{ 
+    double answer = Math.Sqrt(Math.Pow((x2-x1),2)+ Math.Pow((y2-y1),2)+ Math.Pow((z2-z1),2));
+    return answer;
+}
 
 
 // Задача 23
