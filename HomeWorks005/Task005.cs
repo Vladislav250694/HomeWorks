@@ -4,21 +4,21 @@
 
 // 2, 4 -> 16
 
-// Console.Write("Введите число A: ");
-// int A=Convert.ToInt32(Console.ReadLine());
-// Console.Write("Введите число B: ");
-// int B=Convert.ToInt32(Console.ReadLine());
-// Construction(A,B);
+Console.Write("Введите число A: ");
+int A=Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int B=Convert.ToInt32(Console.ReadLine());
+Construction(A,B);
 
-// void Construction(int A,int B)
-// {
-// double Construction=0;
+void Construction(int A,int B)
+{
+double Construction=0;
 
-// { 
-//     Construction=Math.Pow(A,B);
-//     Console.WriteLine ($"Число {A} возведено в степень {B} = {Construction} ");
-// }
-// }
+{ 
+    Construction=Math.Pow(A,B);
+    Console.WriteLine ($"Число {A} возведено в степень {B} = {Construction} ");
+}
+}
 
 
 // Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -44,3 +44,20 @@ int sum(int num)
     }
     return sum;
 } 
+
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+
+// 6, 1, 33 -> [6, 1, 33]
+
+
+int[] array = new int[8];
+Random myRandom = new Random();
+Console.WriteLine("Рандомный массив ");
+    for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = myRandom.Next(0, 8);
+            Console.Write("{0} ", array[i]);
+        }
