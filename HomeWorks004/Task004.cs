@@ -8,17 +8,17 @@ Console.Write("Введите число A: ");
 int A=Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B=Convert.ToInt32(Console.ReadLine());
-Construction(A,B);
+// Construction(A,B);
 
-void Construction(int A,int B)
-{
-double Construction=0;
+// void Construction(int A,int B)
+// {
+// double Construction=0;
 
-{ 
-    Construction=Math.Pow(A,B);
-    Console.WriteLine ($"Число {A} возведено в степень {B} = {Construction} ");
-}
-}
+// { 
+//     Construction=Math.Pow(A,B);
+//     Console.WriteLine ($"Число {A} возведено в степень {B} = {Construction} ");
+// }
+// }
 
 
 
@@ -33,7 +33,20 @@ double Construction=0;
 // 9012 -> 12
 
 
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Сумма цифр = {sum(num)}");
 
+// int sum(int num)
+// {
+//     int sum = 0;
+//     while (num > 0)
+//     {
+//         sum += num % 10;
+//         num /= 10;
+//     }
+//     return sum;
+// } 
 
 
 
