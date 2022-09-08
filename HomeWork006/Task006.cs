@@ -34,4 +34,50 @@ for (int z = 0; z < array.Length; z++)
 if (array[z] % 2 == 0)
 count++;
 
-Console.Write($"\nВсего: {array.Length} чисел, {count} из них чётные");
+Console.Write($"\nВсего: {array.Length} чисел, {count} из них чётные \n");
+
+
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+
+// [3, 7, 23, 12] -> 19
+
+// [-4, -6, 89, 6] -> 0
+
+
+int [] FilArr1(int lengthArr1)
+{
+    System.Random numberGen1 = new System.Random();
+    int k1 = 0;
+    int [] outArr1 = new int [lengthArr1];
+    while (k1<lengthArr1)
+    {
+        outArr1[k1] = numberGen1.Next(1,100);
+        k1++;
+    }
+    return outArr1;
+}
+
+void PrintOneDArr (int[] inputArr1)
+{
+    int k1 = 0;
+    while (k1<inputArr1.Length-1)
+    {
+        Console.Write(inputArr1[k1]+", ");
+        k1++;
+    }
+    Console.Write(inputArr1[k1]);
+}
+int [] array1 = FilArr1(9);
+PrintOneDArr(array1);
+
+int count1 = 0;
+int sum = 0;
+for (int z1 = 0; z1 < array1.Length; z1++)
+if (array1[z1] % 2 == 1)
+{
+    sum+=array1[z1];
+}
+count1++;
+
+Console.Write($"\nВсего: {array1.Length} чисел, {sum} сумма нечетных");
