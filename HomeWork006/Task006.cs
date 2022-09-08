@@ -80,4 +80,54 @@ if (array1[z1] % 2 == 1)
 }
 count1++;
 
-Console.Write($"\nВсего: {array1.Length} чисел, {sum} сумма нечетных");
+Console.Write($"\nВсего: {array1.Length} чисел,  сумма нечетных {sum} \n");
+
+
+// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+
+
+double [] FilArr2(int lengthArr2)
+{
+    System.Random numberGen2 = new System.Random();
+    int k2 = 0;
+    double [] outArr2 = new double [lengthArr2];
+    while (k2<lengthArr2)
+    {
+        outArr2[k2] = numberGen2.Next(1,100);
+        k2++;
+    }
+    return outArr2;
+}
+
+void PrintTwoDArr (double[] inputArr2)
+{
+    int k2 = 0;
+    while (k2<inputArr2.Length-1)
+    {
+        Console.Write(inputArr2[k2]+", ");
+        k2++;
+    }
+    Console.Write(inputArr2[k2]);
+}
+double [] array2 = FilArr2(12);
+PrintTwoDArr(array2);
+
+double max = 0;
+double min = 100;
+for (int z2 = 0; z2 < array2.Length; z2++)
+{
+    if (array2[z2] > max)
+        {
+            max = array2[z2];
+        }
+    if (array2[z2] < min)
+        {
+            min = array2[z2];
+        }
+}
+Console.Write($"\nМаксимальный элемент = {max}, минимальный элемент = {min}");
+Console.Write($"\nРазность между максимальным и минимальным элементами из массива = {max-min}");
+
+
